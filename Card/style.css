@@ -46,6 +46,20 @@ section::after {
   margin-top: 20px; /* Adjust top margin to give some space above */
 }
 
+/* Mobile responsiveness: Switch to column layout for small screens */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Stack the cards vertically on mobile */
+    gap: 20px; /* Adjust the gap between the cards when stacked */
+  }
+
+  .container {
+    width: 100%; /* Full width for each card */
+    height: auto; /* Adjust height according to content */
+  }
+}
+
+/* Container for individual cards */
 .container {
   position: relative;
   height: 225px;
@@ -59,6 +73,7 @@ section::after {
   transform: rotateY(180deg);
 }
 
+/* Card Styles */
 .card {
   position: absolute;
   height: 100%;
@@ -159,13 +174,6 @@ h5.name {
 .valid-date h5 {
   margin-left: 20px;
   text-align: right;
-}
-
-@media (max-width: 768px) {
-  .container {
-    width: 400px;
-    height: 250px;
-  }
 }
 
 /* Second card front face specific */
