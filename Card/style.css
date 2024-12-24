@@ -180,3 +180,53 @@ h5.name {
 .card-container .container:nth-child(2) .front-face {
   background-image: url('images/real-madrid-cf-1920x1200-15510.jpg');
 }
+/* Specific styles for the new card (optional) */
+.card-container .container:nth-child(3) .front-face {
+  background-image: url('images/barca.jpg'); /* Set the background image for Juventus */
+}
+
+.card-container .container:nth-child(3) .card-details .name-number h5.number {
+  font-size: 20px; /* Example: adjust font size for the new card */
+}
+
+.card-container .container:nth-child(3) .card-details .valid-date h5 {
+  color: #ffffff; /* Example: set a different color for the "Most Used Player" */
+}
+/* Specific styles for the fourth card (FC Barcelona) */
+.card-container .container:nth-child(4) .front-face {
+  background-image: url('images/manu.jpg'); /* Set the background image for Barcelona */
+}
+
+.card-container .container:nth-child(4) .card-details .name-number h5.number {
+  font-size: 20px; /* Adjust font size for the new card */
+}
+
+.card-container .container:nth-child(4) .card-details .valid-date h5 {
+  color: #ffffff; /* Set a different color for the "Most Used Player" text */
+}
+/* Specific styles for the fifth card (Chelsea) */
+.card-container .container:nth-child(5) .front-face {
+  background-image: url('images/city.jpg'); /* Set the background image for Chelsea */
+}
+
+.card-container .container:nth-child(5) .card-details .name-number h5.number {
+  font-size: 20px; /* Adjust font size for the Chelsea card */
+}
+
+.card-container .container:nth-child(5) .card-details .valid-date h5 {
+  color: #ffffff; /* Set a different color for the "Most Used Player" text */
+}
+
+/* Specific styles for the sixth card (Bayern Munich) */
+.card-container .container:nth-child(6) .front-face {
+  background-image: url('images/desktop-wallpaper-kerala-blasters-fc-glitter-logo-isl-blue-yellow-checkered-background-soccer-indian-football-club-kerala-blasters-logo-mosaic-art-football-fc-kerala-blasters-india-.jpg'); /* Set the background image for Bayern Munich */
+}
+
+.card-container .container:nth-child(6) .card-details .name-number h5.number {
+  font-size: 20px; /* Adjust font size for the Bayern Munich card */
+}
+
+.card-container .container:nth-child(6) .card-details .valid-date h5 {
+  color: #edb418; /* Set a different color for the "Most Used Player" text */
+}
+
