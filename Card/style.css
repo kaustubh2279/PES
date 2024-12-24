@@ -1,0 +1,174 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: #121321;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  perspective: 1000px;
+}
+
+section::before,
+section::after {
+  content: "";
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+}
+
+section::before {
+  transform: translate(-150px, -100px);
+}
+
+section::after {
+  transform: translate(150px, 100px);
+}
+
+/* New Card Container (Position the cards side by side) */
+.card-container {
+  display: flex;
+  justify-content: center; /* Align the cards in the center */
+  gap: 30px; /* Add space between the two cards */
+  margin-top: 20px; /* Adjust top margin to give some space above */
+}
+
+.container {
+  position: relative;
+  height: 225px;
+  width: 375px;
+  z-index: 100;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.container:hover {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 25px;
+  border-radius: 25px;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.front-face {
+  background-image: url('images/milan2.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  color: #fff;
+}
+
+.front-face header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.front-face .logo {
+  display: flex;
+  align-items: center;
+}
+
+.front-face .logo img {
+  width: 48px;
+  margin-right: 10px;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.front-face .chip {
+  width: 50px;
+}
+
+.front-face .card-details {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
+h6 {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+h5.number {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+h5.name {
+  margin-top: 20px;
+}
+
+/* Back Face */
+.card.back-face {
+  border: none;
+  padding: 0;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.card.back-face .card-back-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.card.back-face:hover .card-back-image {
+  transform: scale(1.1);
+}
+
+/* Most used player */
+.valid-date h6,
+.valid-date h5 {
+  margin-left: 20px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 400px;
+    height: 250px;
+  }
+}
+
+/* Second card front face specific */
+.card-container .container:nth-child(2) .front-face {
+  background-image: url('images/real-madrid-cf-1920x1200-15510.jpg');
+}
