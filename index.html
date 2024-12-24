@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pes Boys</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="images/pes.jpg" alt="PES BOYS Logo">
+      </a>
+      <ul class="menu-links">
+        <li><a href="#">Home</a></li>
+        <li class="language-item">
+          <a href="#menu">
+            <span class="material-symbols-outlined">language</span>
+            Teams
+          </a>
+        </li>
+        <li><a href="./Gameplay/movie-website-master/index.html">GamePlay</a></li>
+        <li><a href="./Card/index.html">GamePlan</a></li>
+        <li class="join-btn"><a href="">Join Us</a></li>
+        <span id="close-menu-btn" class="material-symbols-outlined" aria-label="Close menu">close</span>
+      </ul>
+      <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="content">
+      <h1>Welcome to Pes Boys.</h1>
+      <div class="popular-tags">
+        <ul class="tags">
+          <li><a href="./slider-main/members.html">Members</a></li>
+          <li><a href="./Gameplay/movie-website-master/index.html">Gameplay</a></li>
+          <li><a href="./Card/index.html">Game Plan</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Scroll-to-Reveal Section with Image -->
+  <section class="scroll-section">
+    <div class="content">
+      <div class="image-container">
+        <img src="images/lionel-messi-kissing-world-cup-trophy-5esr99k0x9w2w27h.jpg" alt="Scroll Section Image">
+      </div>
+      <div class="text-container">
+        <h2>ABOUT US</h2>
+        <p>PES Boys is a group of 6 players. </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Teams Section -->
+  <section class="menu-section" id="menu">
+    <h2 class="section-title">Our Teams</h2>
+    <br>
+    <div class="section-content">
+      <ul class="menu-list">
+        <li class="menu-item">
+          <img src="images/milan2.jpg" alt="Hot Beverages" class="menu-image" />
+          <div class="menu-details">
+            <h3 class="name">KAUSTUBH</h3>
+          </div>
+        </li>
+        <li class="menu-item">
+          <img src="images/real-madrid-cf-1920x1200-15510.jpg" alt="Cold Beverages" class="menu-image" />
+          <div class="menu-details">
+            <h3 class="name">JATAN</h3>
+          </div>
+        </li>
+        <li class="menu-item">
+          <img src="images/barca.jpg" alt="Refreshment" class="menu-image" />
+          <div class="menu-details">
+            <h3 class="name">YASH PATEL</h3>
+          </div>
+        </li>
+        <li class="menu-item">
+          <img src="images/manu.jpg" alt="Special Combos" class="menu-image" />
+          <div class="menu-details">
+            <h3 class="name">TIGER</h3>
+          </div>
+        </li>
+        <li class="menu-item">
+          <img src="images/desktop-wallpaper-kerala-blasters-fc-glitter-logo-isl-blue-yellow-checkered-background-soccer-indian-football-club-kerala-blasters-logo-mosaic-art-football-fc-kerala-blasters-india-.jpg" alt="Dessert" class="menu-image" />
+          <div class="menu-details">
+            <h3 class="name">MALLU</h3>
+          </div>
+        </li>
+        <li class="menu-item">
+          <img src="images/vasai-removebg-preview.jpg" alt="burger & French Fries" class="menu-image" />
+          <div class="menu-details">
+            <h3 class="name">ANSHIET</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    const header = document.querySelector("header");
+    const hamburgerBtn = document.querySelector("#hamburger-btn");
+    const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+    hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+    closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+
+    // Scroll-to-Reveal Section
+    const scrollSection = document.querySelector(".scroll-section");
+
+    function checkScroll() {
+      const scrollPosition = window.scrollY + window.innerHeight; 
+      const sectionPosition = scrollSection.offsetTop;
+      if (scrollPosition > sectionPosition) {
+        scrollSection.classList.add("show");
+      }
+    }
+
+    window.addEventListener("scroll", checkScroll);
+  </script>
+</body>
+</html>
