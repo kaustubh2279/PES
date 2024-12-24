@@ -121,7 +121,14 @@
       }
     }
 
-    window.addEventListener("scroll", checkScroll);
+   window.addEventListener("scroll", checkScroll);
+
+    // JavaScript Alert for Join Us button
+    const joinUsBtn = document.getElementById("join-us-btn");
+
+    joinUsBtn.addEventListener("click", () => {
+      alert("No new registrations!");
+    });
   </script>
 </body>
 </html>
